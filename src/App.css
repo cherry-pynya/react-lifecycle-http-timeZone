@@ -1,1 +1,42 @@
+.timeZone-form {
+    display: flex;
+    margin: 20px 0 20px 0;
+}
 
+.timeZone-form-cnt {
+    margin-right: 20px;
+}
+
+.timeZone-form-input {
+    margin-left: 10px;
+}
+
+.timezone-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timezone-dashboard-tiktak {
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.timezone-dashboard-tiktak-btn {
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+}
+
+.timezone-dashboard-tiktak-btn {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+span {
+    text-align: center;
+}

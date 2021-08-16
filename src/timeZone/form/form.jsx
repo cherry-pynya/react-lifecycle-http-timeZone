@@ -14,7 +14,7 @@ export default function Form({ addTimezone }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (data.name.length <= 0) return false;
-    if (data.timeZone <= 0 && data.timeZone > 24) return false;
+    if (Number(data.timeZone) <= 0 || Number(data.timeZone) > 24) return false;
     addTimezone(data);
     setData({
       name: '',

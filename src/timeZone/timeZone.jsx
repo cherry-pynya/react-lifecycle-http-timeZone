@@ -1,16 +1,27 @@
 import { useState } from "react";
 import Form from './form/form';
 import Dashboard from './dashboard/dashboard';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function TimeZone() {
   const [zones, setTimezone] = useState([]);
 
   const addTimezone = (data) => {
-    console.log(data)
+    const {timeZone, name} = data;
+    const now = new Date();
+    const date = new Date(now.getTime() + (timeZone * 360000));
+    zones.push({
+      date: date,
+      name: name,
+      id: uuidv4(),
+    });
+    setTimezone([...zones]);
   };
 
   const deleteZone = (id) => {
-    console.log(id)
+    const index = zones.findIndex((el) => el.id === id);
+    zones.splice(index, 1);
+    setTimezone([...zones]);
   }
 
   return (
